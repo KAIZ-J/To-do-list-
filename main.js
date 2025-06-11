@@ -8,7 +8,7 @@ function add() {
 
   newData.classList.add('box');
 if (input!=="") {
-  newData.innerHTML=`<input type="checkbox" onclick="tgl(this)"/><span>${input}</span> <button type="submit" id="del" onclick="del()">×</button>`;
+  newData.innerHTML=`<input type="checkbox" onclick="tgl(this)"/><span>${input}</span> <button type="submit" id="del" onclick="del(this)">×</button>`;
   container.prepend(newData);
  i.value="";
 } 
@@ -33,9 +33,8 @@ else {
 }
 
 
-function del(){
-  const box = document.querySelector(".box");
-  const container = document.getElementById("data-container");
-  container.removeChild(box);
+function del(bt){
+  const box = bt.parentElement;
+  box.remove();
 
 }
