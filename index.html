@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-do list</title>
+<style>
+body{
+  background-color:#282828 ;
+}
+  h1{
+    text-align: center;
+    color: white;
+  }
+  #container form{
+    display: flex;
+    
+    gap: 5px;
+  }
+  #container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #181818;
+    border-radius: 5px;
+    height: 400px;
+    
+  }
+  #container .box {
+    width: 80%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+    background-color: #777ED5;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+    
+  #data{
+    width:200px;
+    height: 40px;
+    border:none;
+    border-radius: 10px;
+  }
+  button{
+    width:60px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #777ED5;
+    color: white;
+    border-radius: 10px;
+  }
+  #data[type="text"]{
+    color: #777ED5;
+    text-align: center;
+  }
+  #data-container{
+    overflow-y:auto;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  }
+ #container .completed{
+background-color: #444;
+  }
+  .completed span{
+    text-decoration-line: line-through;
+    color:gray;
+    
+  }
+  
+  
+</style>
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <br /><br>
+  <h1>
+    To-Do list
+  </h1>
+  <div id="container">
+    <br>
+    <form id="form">
+      <input type="text" name="" id="data" placeholder="Get out with the garbage"/>
+      <button type="button" onclick="add()">Add</button>
+    </form>
+    <div id="data-container">
+      
+
+    <div class="box">
+      <input type="checkbox" onclick="tgl(this)"/>
+     <span> Do Math Assignment</span>
+     <button type="submit" id="del" onclick="del()">×</button>
+    </div>
+
+        </div>
+        <br /> <br />
+  </div>
+  
+<script src="main.js"></script>
+</body>
+  
+</html>
