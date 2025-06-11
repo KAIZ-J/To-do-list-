@@ -15,8 +15,6 @@ body{
   }
   #container form{
     display: flex;
-    
-    gap: 5px;
   }
   #container{
     display: flex;
@@ -33,7 +31,7 @@ body{
     text-align: center;
     font-size: 1.3rem;
     padding: 10px;
-    background-color: #777ED5;
+    background-color: #920D0D;
     color: white;
     border-radius: 5px;
     display: flex;
@@ -46,14 +44,18 @@ body{
     height: 40px;
     border:none;
     border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
   }
-  button{
+form  button{
     width:60px;
     border: none;
     font-size: 1.2rem;
-    background-color: #777ED5;
+    background-color: #920D0D;
     color: white;
     border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
   }
   #data[type="text"]{
     color: #777ED5;
@@ -76,7 +78,12 @@ background-color: #444;
     
   }
   
-  
+#container .box button{
+border: none;
+font-size: 1.35rem;
+background-color: #920D0D;
+color: white;
+}
 </style>
   <title>HTML</title>
   <link rel="stylesheet" href="style.css">
