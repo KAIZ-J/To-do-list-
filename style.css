@@ -1,0 +1,112 @@
+:root {
+--text: #100d1c;
+  --background: #ece9f7;
+  --primary: #342370;
+  --secondary: #947fe1;
+  --accent: #4922c9;
+}
+body.dark {
+--text: #e5e2f1;
+  --background: #0b0815;
+  --primary: #a08fdc;
+  --secondary: #341e80;
+  --accent: #5b34dd;
+}
+
+*{
+    font-family: poppins;
+}
+body{
+  background-color:var(--background) ;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+ form{
+    display: flex;
+  }
+  h1{
+    font-family: Audiowide;
+  }
+  #container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    border-radius: 10px;
+    height: 330px;
+     overflow-y:scroll;
+    width: 350px;
+  gap: 20px;
+  padding-top: 20px;
+  }
+  #container::-webkit-scrollbar{
+    display: none;
+  }
+
+
+  #container .to-do {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: 10px;
+    display: flex;
+    transition:background-color .3s ease,text-decoration-line .3s ease,order 1s ease-in-out,scale .15s ease;
+    justify-content: space-between;
+    cursor: pointer;
+    
+  }
+   #container .to-do:hover {
+    scale: 1.02;
+   }
+   #container .to-do.completed{
+background-color: #444;
+order: 1;
+  }
+  #container .to-do.completed span{
+    text-decoration-line: line-through;
+    color:gray;
+  }
+  #data{
+    width:200px;
+    height: 40px;
+    border:none;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    outline: none;
+  }
+
+form  button{
+    width:60px;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+       cursor: pointer;
+  }
+  #data[type="text"]{
+    color: var(--primary);
+    text-align: center;
+  }
+ 
+#container .to-do button{
+border: none;
+background:transparent;
+color: rgb(255, 254, 254);
+cursor: pointer;
+}
+#container .to-do input{
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}

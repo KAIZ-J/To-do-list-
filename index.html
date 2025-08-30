@@ -1,119 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>To-do list</title>
-<style>
-body{
-  background-color:#282828 ;
-}
-  h1{
-    text-align: center;
-    color: white;
-  }
-  #container form{
-    display: flex;
-  }
-  #container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #181818;
-    border-radius: 5px;
-    height: 400px;
-    
-  }
-  #container .box {
-    width: 80%;
-    text-align: center;
-    font-size: 1.3rem;
-    padding: 10px;
-    background-color: #920D0D;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    
-  }
-    
-  #data{
-    width:200px;
-    height: 40px;
-    border:none;
-    border-radius: 10px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-form  button{
-    width:60px;
-    border: none;
-    font-size: 1.2rem;
-    background-color: #920D0D;
-    color: white;
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-  #data[type="text"]{
-    color: #777ED5;
-    text-align: center;
-  }
-  #data-container{
-    overflow-y:auto;
-    width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  }
- #container .completed{
-background-color: #444;
-  }
-  .completed span{
-    text-decoration-line: line-through;
-    color:gray;
-    
-  }
-  
-#container .box button{
-border: none;
-font-size: 1.35rem;
-background-color: #920D0D;
-color: white;
-}
-</style>
-  <title>HTML</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9603c04a31.js"
+      crossorigin="anonymous"
+    ></script>
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kablammo|Audiowide|Atma|Poppins|Montserrat"
+    />
+  </head>
 
-<body>
-  <br /><br>
-  <h1>
-    To-Do list
-  </h1>
-  <div id="container">
-    <br>
-    <form id="form">
-      <input type="text" name="" id="data" placeholder="Get out with the garbage"/>
-      <button type="button" onclick="add()">Add</button>
-    </form>
-    <div id="data-container">
-      
+  <body class="dar">
+    <h1>To-Do List</h1>
+     <form id="form">
+        <input type="text" id="data" placeholder="Add to-do..." />
+        <button type="submit">Add</button>
+      </form>
 
-    <div class="box">
-      <input type="checkbox" onclick="tgl(this)"/>
-     <span> Do Math Assignment</span>
-     <button type="submit" id="del" onclick="del(this)">×</button>
+    <div id="container">
+        
     </div>
 
-        </div>
-        <br /> <br />
-  </div>
-  
-<script src="main.js"></script>
-</body>
-  
+    <script src="main.js"></script>
+  </body>
 </html>
