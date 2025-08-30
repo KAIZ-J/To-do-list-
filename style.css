@@ -81,7 +81,9 @@ order: 1;
     border-top-right-radius: 0px;
     outline: none;
   }
-
+#data:focus::placeholder{
+  opacity: 0;
+}
 form  button{
     width:60px;
     border: none;
