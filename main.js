@@ -1,10 +1,13 @@
-  const form = document.getElementById("form")
+ const taskNumber  = document.getElementById("task-number")
+  const completedtaskNumber  = document.getElementById("completed-task-number")
+ const form = document.getElementById("form")
   const container = document.getElementById("container");
   const input= document.getElementById("data");
   let counter = parseInt(localStorage.getItem("counter")) || 4;
   let toDosArray = JSON.parse(localStorage.getItem("toDosArr")) || [{id:1,text: "Do Math Assignment",isCompleted:false},
     {id:2,text: "Water the plants",isCompleted:true},
     {id:3,text: "Go to Gym",isCompleted:false}];
+    taskNumber.textContent=toDosArray.length;
   function addContainer(){
     container.innerHTML="";
     toDosArray.forEach(el=>{
@@ -26,6 +29,8 @@ function add() {
   localStorage.setItem("counter",counter)
   toDosArray.unshift(toDoObj);
   localStorage.setItem("toDosArr",JSON.stringify(toDosArray))
+   taskNumber.textContent=toDosArray.length;
+   completedNumber()
   addContainer();
   input.value="";
 }
@@ -47,11 +52,14 @@ function complete(elem){
   else{
     elem.parentElement.classList.remove("completed")
   }
+  completedNumber()
 }
 function deleteTask(elem){
   let index = toDosArray.findIndex(el=>el.id===Number(elem.parentElement.id.split("-")[1]));
   toDosArray.splice(index,1);
   localStorage.setItem("toDosArr",JSON.stringify(toDosArray))
+   taskNumber.textContent=toDosArray.length;
+   completedNumber()
    elem.parentElement.remove()
 }
  function wiggle(em){
@@ -60,4 +68,13 @@ function deleteTask(elem){
      function stopwiggle(em){
       em.classList.toggle("fa-shake");
      }
-    
+    function completedNumber(){
+      let num = 0;
+      for(let i=0;i<toDosArray.length;i++){
+  if(toDosArray[i].isCompleted){
+   num++;
+  }
+      }
+      completedtaskNumber.textContent=num;
+    }
+    completedNumber()
