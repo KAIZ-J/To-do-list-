@@ -106,9 +106,33 @@ background:transparent;
 color: rgb(255, 254, 254);
 cursor: pointer;
 }
-#container .to-do input{
-    width: 30px;
+#container .to-do input[type="checkbox"]{
+  -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    border: none;
-    outline: none;
+    border: 2px solid var(--primary);
+    border-radius:50%;
+    display: grid;
+    place-content: center;
+}
+#container .to-do input[type="checkbox"]::before{
+  content: '';
+  background-color: var(--secondary);
+  width: 20px;
+    height: 20px;
+    border-radius:50%;
+    background-image: url(check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24\ \(1\).svg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    rotate: -360deg;
+    opacity: 0;
+    scale: 0;
+  transition: .2s ease;
+}
+#container .to-do input[type="checkbox"]:checked::before{
+  rotate: 0deg;
+    opacity: 1;
+    scale: 1;
 }
